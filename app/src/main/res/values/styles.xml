@@ -8,4 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="StandardText" parent="AppTheme">
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="ButtonStyle" parent="StandardText">
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:panelColorBackground">#FFFFFF</item>
+    </style>
+
 </resources>
