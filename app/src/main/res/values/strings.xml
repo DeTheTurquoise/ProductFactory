@@ -2,6 +2,7 @@
     <string name="app_name">ProductFactory</string>
 
     <!--menu-->
+    <string name="menu_toc">Spis treści</string>
 
     <!--main screen-->
     <string name="button_next">Poprzednia strona</string>
