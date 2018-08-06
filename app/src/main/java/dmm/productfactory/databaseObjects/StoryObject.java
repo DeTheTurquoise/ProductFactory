@@ -10,6 +10,9 @@ public class StoryObject {
     @PrimaryKey
     private int storyId;
 
+    @ColumnInfo(name = "text_title")
+    private String textTitle;
+
     @ColumnInfo(name = "main_text")
     private String mainText;
 
@@ -71,5 +74,13 @@ public class StoryObject {
 
     public void setDisplayDate(String displayDate) {
         this.displayDate = displayDate;
+    }
+
+    public String getTextTitle() {
+        return textTitle;
+    }
+
+    public void setTextTitle(String textTitle) {
+        this.textTitle = textTitle;
     }
 }

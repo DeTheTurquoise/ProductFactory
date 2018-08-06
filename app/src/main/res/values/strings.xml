@@ -4,11 +4,15 @@
     <!--menu-->
     <string name="menu_toc">Spis treści</string>
 
-    <!--main screen-->
+    <!--story screen-->
     <string name="button_next">Poprzednia strona</string>
     <string name="button_previous">Kolejna strona</string>
     <string name="button_text">Przeczytaj</string>
     <string name="button_video">Zobacz</string>
     <string name="button_sound">Posłuchaj</string>
+
+
+    <!--main screen-->
+    <string name="button_read">Otwórz</string>
 </resources>
 
