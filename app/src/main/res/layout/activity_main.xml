@@ -4,17 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.MainActivity"
+    android:background="@color/colorBackground">
 
     <TextView
-        android:id="@+id/main_text"
+        android:id="@+id/title_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/button_start"/>
+
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/main_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/button_start"
+
+        android:textAlignment="center"
+        android:gravity="center"/>
 
     <Button
         android:id="@+id/button_start"
@@ -22,6 +36,21 @@
         android:layout_height="wrap_content"
 
         android:onClick="startReading"
+        android:text="@string/button_read"
+
+        app:layout_constraintBottom_toTopOf="@id/button_toc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        style="@style/ButtonStyle"/>
+
+    <Button
+        android:id="@+id/button_toc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:onClick="startToc"
+        android:text="@string/menu_toc"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

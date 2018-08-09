@@ -1,4 +1,6 @@
 package dmm.productfactory.activities;
 
-public class TocActivity {
+import android.support.v7.app.AppCompatActivity;
+
+public class TocActivity extends AppCompatActivity {
 }

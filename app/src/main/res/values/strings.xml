@@ -5,8 +5,8 @@
     <string name="menu_toc">Spis treści</string>
 
     <!--story screen-->
-    <string name="button_next">Poprzednia strona</string>
-    <string name="button_previous">Kolejna strona</string>
+    <string name="button_next">Kolejna strona</string>
+    <string name="button_previous">Poprzednia strona</string>
     <string name="button_text">Przeczytaj</string>
     <string name="button_video">Zobacz</string>
     <string name="button_sound">Posłuchaj</string>
