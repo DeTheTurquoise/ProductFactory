@@ -75,6 +75,14 @@ public class JsonParser {
         return title;
     }
 
+    public static String[] getPoemList(String JSONResult){
+        String poemList[] = new String[countPoems(JSONResult)];
+        for (int i=0;i<countPoems(JSONResult);i++){
+            poemList[i] = getPoemTitle(JSONResult,i);
+        }
+        return poemList;
+    }
+
 }
 
 

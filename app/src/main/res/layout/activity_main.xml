@@ -16,19 +16,26 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+
+        android:textColor="@color/fontColor"
+        style="@style/StandardText"/>
 
     <TextView
         android:id="@+id/main_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/button_start"
+        app:layout_constraintBottom_toTopOf="@id/button_start"
+        app:layout_constraintTop_toBottomOf="@+id/title_text"
 
         android:textAlignment="center"
-        android:gravity="center"/>
+        android:gravity="center"
+
+        android:textColor="@color/fontColor"
+        style="@style/TitleText"/>
 
     <Button
         android:id="@+id/button_start"
@@ -42,6 +49,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
 
+        android:background="@color/colorPrimary"
         style="@style/ButtonStyle"/>
 
     <Button
@@ -56,6 +64,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
 
+        android:background="@color/colorPrimary"
         style="@style/ButtonStyle"/>
 
 

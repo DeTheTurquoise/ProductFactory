@@ -6,5 +6,7 @@
 
     <color name="colorBackground">#fbf3ea</color>
     <color name="fontColor">#2d1c09</color>
+    <color name="fontColorLight">#3d260c</color>
+    <color name="fontColorExtraLight">#4e300f</color>
 
 </resources>

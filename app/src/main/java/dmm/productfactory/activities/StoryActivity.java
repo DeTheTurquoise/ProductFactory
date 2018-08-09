@@ -1,5 +1,6 @@
 package dmm.productfactory.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,7 +15,7 @@ public class StoryActivity extends AppCompatActivity{
 
 
 
-    private int storyNumber = 0;
+    private int storyNumber;
     private int poemsCount = JsonParser.countPoems(JsonData.POEM_DATA) - 1;
     private TextView titleText;
     private TextView generalTextView;
@@ -26,6 +27,12 @@ public class StoryActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.story_layout);
         prepareScreen();
+        Intent intentThatStartedThisActivity = getIntent();
+        if (intentThatStartedThisActivity != null) {
+            if (intentThatStartedThisActivity.hasExtra(Intent.EXTRA_TEXT)) {
+                storyNumber = intentThatStartedThisActivity.getIntExtra(Intent.EXTRA_TEXT,0);
+            }
+        }
         refreshScreen();
     }
 
