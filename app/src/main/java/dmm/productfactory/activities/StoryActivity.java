@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import dmm.productfactory.R;
@@ -21,6 +22,7 @@ public class StoryActivity extends AppCompatActivity{
     private TextView generalTextView;
     private Button leftButton;
     private Button rightButton;
+    private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +43,11 @@ public class StoryActivity extends AppCompatActivity{
         generalTextView = (TextView) findViewById(R.id.poem_general_text);
         leftButton = (Button) findViewById(R.id.left_button);
         rightButton = (Button) findViewById(R.id.right_button);
+        scrollView = (ScrollView) findViewById(R.id.story_scroll);
     }
 
     private void refreshScreen(){
+        scrollView.scrollTo(0,0);
         titleText.setText(JsonParser.getPoemTitle(JsonData.POEM_DATA,storyNumber));
         generalTextView.setText(JsonParser.getPoemText(JsonData.POEM_DATA,storyNumber));
         setButtonsVisibility();
@@ -71,14 +75,6 @@ public class StoryActivity extends AppCompatActivity{
             leftButton.setVisibility(View.VISIBLE);
             rightButton.setVisibility(View.VISIBLE);
         }
-    }
-
-    public void setGeneralText(String text){
-        generalTextView.setText(text);
-    }
-
-    public String getGeneralText(){
-        return generalTextView.getText().toString();
     }
 
 

@@ -1,18 +1,14 @@
 <resources>
-    <string name="app_name">ProductFactory</string>
-
-    <!--menu-->
-    <string name="menu_toc">Spis treści</string>
+    <string name="app_name">Jonasz Kofta</string>
 
     <!--story screen-->
     <string name="button_next">Kolejna strona</string>
     <string name="button_previous">Poprzednia strona</string>
-    <string name="button_text">Przeczytaj</string>
-    <string name="button_video">Zobacz</string>
-    <string name="button_sound">Posłuchaj</string>
 
 
     <!--main screen-->
     <string name="button_read">Otwórz</string>
+    <string name="button_read_random">Otwórz losowy wiersz</string>
+    <string name="button_toc">Spis treści</string>
 </resources>
 

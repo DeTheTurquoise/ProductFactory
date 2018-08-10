@@ -38,12 +38,27 @@
         style="@style/TitleText"/>
 
     <Button
-        android:id="@+id/button_start"
+    android:id="@+id/button_start"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:onClick="startReading"
+    android:text="@string/button_read"
+
+    app:layout_constraintBottom_toTopOf="@id/button_start_random"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+
+    android:background="@color/colorPrimary"
+    style="@style/ButtonStyle"/>
+
+    <Button
+        android:id="@+id/button_start_random"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:onClick="startReading"
-        android:text="@string/button_read"
+        android:onClick="startFromRandomPage"
+        android:text="@string/button_read_random"
 
         app:layout_constraintBottom_toTopOf="@id/button_toc"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -58,7 +73,7 @@
         android:layout_height="wrap_content"
 
         android:onClick="startToc"
-        android:text="@string/menu_toc"
+        android:text="@string/button_toc"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

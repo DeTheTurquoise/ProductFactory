@@ -3,10 +3,10 @@ package dmm.productfactory.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import java.util.Random;
 
 import dmm.productfactory.R;
 import dmm.productfactory.jsonObjects.JsonData;
@@ -37,21 +37,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,TocActivity.class));
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);    return true;}
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return selectItem(item);}
-
-    public boolean selectItem(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_toc:
-                startActivity(new Intent(this,TocActivity.class));
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);    }
+    public void startFromRandomPage(View view){
+        Random randomPage = new Random();
+        Intent intent = new Intent(this,StoryActivity.class);
+        intent.putExtra(Intent.EXTRA_TEXT,randomPage.nextInt(JsonParser.countPoems(JsonData.POEM_DATA)));
+        startActivity(intent);
     }
-
 }
