@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Random;
+
 import dmm.productfactory.R;
 import dmm.productfactory.jsonObjects.JsonData;
 import dmm.productfactory.jsonObjects.JsonParser;
@@ -36,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
     public void startToc(View view){
         startActivity(new Intent(this,TocActivity.class));
     }
+
+    public void startFromRandomPage(View view){
+        Random randomPage = new Random();
+        Intent intent = new Intent(this,StoryActivity.class);
+        intent.putExtra(Intent.EXTRA_TEXT,randomPage.nextInt(JsonParser.countPoems(JsonData.POEM_DATA)));
+        startActivity(intent);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

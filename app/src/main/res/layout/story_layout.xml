@@ -20,6 +20,7 @@
         style="@style/TitleText"/>
 
     <ScrollView
+        android:id="@+id/story_scroll"
         android:layout_width="match_parent"
 
         android:layout_height="0dp"

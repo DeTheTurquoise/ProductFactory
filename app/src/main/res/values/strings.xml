@@ -14,5 +14,6 @@
 
     <!--main screen-->
     <string name="button_read">Otwórz</string>
+    <string name="button_read_random">Otwórz losowy wiersz</string>
 </resources>
 
