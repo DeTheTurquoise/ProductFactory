@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     public void startFromRandomPage(View view){
         Random randomPage = new Random();
         Intent intent = new Intent(this,StoryActivity.class);
-        intent.putExtra(Intent.EXTRA_TEXT,randomPage.nextInt(JsonParser.countPoems(JsonData.POEM_DATA)));
+        intent.putExtra(Intent.EXTRA_TEXT,randomPage.nextInt(JsonParser.countObjects(JsonData.POEM_DATA)));
         startActivity(intent);
     }
 

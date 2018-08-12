@@ -17,7 +17,7 @@ public class TocActivity extends AppCompatActivity implements TocAdapter.ListIte
 
 
     private TextView storyTitle;
-    private int numberOfResultsToDisplay = JsonParser.countPoems(JsonData.POEM_DATA);
+    private int numberOfResultsToDisplay = JsonParser.countObjects(JsonData.POEM_DATA);
     private TocAdapter tocAdapter;
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -32,14 +32,14 @@ public class TocActivity extends AppCompatActivity implements TocAdapter.ListIte
         recyclerView.setHasFixedSize(true);
         tocAdapter = new TocAdapter(numberOfResultsToDisplay, this);
         recyclerView.clearOnScrollListeners();
-        tocAdapter.setToc(JsonParser.getPoemList(JsonData.POEM_DATA));
+        tocAdapter.setToc(JsonParser.getObjectsList(JsonData.POEM_DATA));
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(tocAdapter);
     }
 
     @Override
     public void onListItemClick(int clickedItemIndex) {
-        Intent intent = new Intent(this,StoryActivity.class);
+        Intent intent = new Intent(this,QuestionActivity.class);
         intent.putExtra(Intent.EXTRA_TEXT,clickedItemIndex);
         startActivity(intent);
     }

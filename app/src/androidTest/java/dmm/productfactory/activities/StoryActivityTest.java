@@ -14,12 +14,12 @@ public class StoryActivityTest {
 
     @Test
     public void applicationGetsPoemNumber(){
-        assertEquals(24, JsonParser.countPoems(JsonData.POEM_DATA));
+        assertEquals(24, JsonParser.countObjects(JsonData.POEM_DATA));
     }
 
     @Test
     public void applicationGetsPoemTitle(){
-        assertEquals("To najdalsze",JsonParser.getPoemTitle(JsonData.POEM_DATA,22));
+        assertEquals("To najdalsze",JsonParser.getObjectName(JsonData.POEM_DATA,22));
     }
 
     @Test

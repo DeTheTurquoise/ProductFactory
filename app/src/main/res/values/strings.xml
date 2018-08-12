@@ -1,8 +1,14 @@
 <resources>
-    <string name="app_name">ProductFactory</string>
+    <string name="app_name"> </string>
 
     <!--menu-->
     <string name="menu_toc">Spis treści</string>
+    <string name="menu_start">Tak na początek</string>
+    <string name="menu_middle">A tak w rozwinięciu</string>
+    <string name="menu_end">Tak na zakończenie</string>
+    <string name="menu_work">Ćwiczenie</string>
+    <string name="menu_motivation">Motywacja</string>
+    <string name="menu_quote">Cytat</string>
 
     <!--story screen-->
     <string name="button_next">Kolejna strona</string>

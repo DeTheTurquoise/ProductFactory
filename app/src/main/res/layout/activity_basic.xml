@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".activities.QuestionActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top|start">
+
+        <ImageView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="top"
+
+            android:src="@mipmap/banner"
+
+            android:adjustViewBounds = "true"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/text_question"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/colorBackgroundDark"
+
+
+            app:layout_constraintTop_toBottomOf="@+id/banner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            android:layout_marginLeft="@dimen/middle_margin"
+            android:layout_marginRight="@dimen/middle_margin"
+
+            style="@style/TitleText"/>
+
+        <ScrollView
+            android:id="@+id/text_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/text_perspective"
+            app:layout_constraintTop_toBottomOf="@+id/text_question"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            android:layout_marginLeft="@dimen/middle_margin"
+            android:layout_marginRight="@dimen/middle_margin">
+
+            <TextView
+                android:id="@+id/text_chosen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+/>
+        </ScrollView>
+        <TextView
+            android:id="@+id/text_perspective"
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:background="@color/colorPrimary"
+            style="@style/BottomText"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab_begin"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="top|start"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--android:onClick="displayBegin"-->
+        <!--app:rippleColor="@color/analogousBlue"-->
+
+        <!--app:srcCompat="@android:drawable/ic_lock_power_off" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab_middle"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center|start"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--android:onClick="displayMiddle"-->
+        <!--app:rippleColor="@color/analogousBlue"-->
+
+        <!--app:srcCompat="@android:drawable/ic_menu_help" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab_end"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|start"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--android:onClick="displayEnd"-->
+        <!--app:rippleColor="@color/analogousBlue"-->
+
+        <!--app:srcCompat="@android:drawable/ic_menu_directions" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab_quote"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--android:onClick="displayQuote"-->
+        <!--app:rippleColor="@color/analogousBlue"-->
+
+        <!--app:srcCompat="@android:drawable/ic_menu_compass" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab_motivation"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center|end"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--app:rippleColor="@color/analogousBlue"-->
+        <!--app:srcCompat="@android:drawable/ic_menu_gallery"-->
+
+        <!--android:onClick="displayMotivation"-->
+        <!--/>-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab_work"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="top|end"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--app:rippleColor="@color/analogousBlue"-->
+        <!--app:srcCompat="@android:drawable/ic_menu_edit"-->
+
+        <!--android:onClick="displayWork"/>-->
+
+</android.support.design.widget.CoordinatorLayout>

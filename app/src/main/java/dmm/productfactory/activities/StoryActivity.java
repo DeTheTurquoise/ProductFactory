@@ -17,7 +17,7 @@ public class StoryActivity extends AppCompatActivity{
 
 
     private int storyNumber;
-    private int poemsCount = JsonParser.countPoems(JsonData.POEM_DATA) - 1;
+    private int poemsCount = JsonParser.countObjects(JsonData.POEM_DATA) - 1;
     private TextView titleText;
     private TextView generalTextView;
     private Button leftButton;
@@ -48,7 +48,7 @@ public class StoryActivity extends AppCompatActivity{
 
     private void refreshScreen(){
         scrollView.scrollTo(0,0);
-        titleText.setText(JsonParser.getPoemTitle(JsonData.POEM_DATA,storyNumber));
+        titleText.setText(JsonParser.getObjectName(JsonData.POEM_DATA,storyNumber));
         generalTextView.setText(JsonParser.getPoemText(JsonData.POEM_DATA,storyNumber));
         setButtonsVisibility();
     }

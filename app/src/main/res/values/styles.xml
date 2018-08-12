@@ -18,6 +18,7 @@
         <item name="android:fontStyle">italic</item>
         <item name="android:height">55dp</item>
         <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
     <style name="ButtonStyle" parent="StandardText">
@@ -28,6 +29,17 @@
     <style name="TwoButtons" parent="ButtonStyle">
         <item name="android:textSize">20dp</item>
         <item name="android:width">100dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="BottomText" parent="AppTheme">
+        <item name="android:fontStyle">italic</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
 </resources>
