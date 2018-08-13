@@ -2,12 +2,10 @@ package dmm.productfactory.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -23,18 +21,12 @@ public class QuestionActivity extends AppCompatActivity {
     private TextView question;
     private TextView chosenText;
     private TextView perspective;
+    private ScrollView scrollView;
 
     private int monthNumber;
     private int weekNumber;
     private int motivationNumber;
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
-    private FloatingActionButton beginText;
-    private FloatingActionButton middleText;
-    private FloatingActionButton endText;
-    private FloatingActionButton quoteText;
-    private FloatingActionButton motivationText;
-    private FloatingActionButton workText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,12 +48,7 @@ public class QuestionActivity extends AppCompatActivity {
         question = (TextView) findViewById(R.id.text_question);
         chosenText = (TextView) findViewById(R.id.text_chosen);
         perspective = (TextView) findViewById(R.id.text_perspective);
-//        beginText = (FloatingActionButton) findViewById(R.id.fab_begin);
-//        middleText = (FloatingActionButton) findViewById(R.id.fab_middle);
-//        endText = (FloatingActionButton) findViewById(R.id.fab_end);
-//        quoteText = (FloatingActionButton) findViewById(R.id.fab_quote);
-//        motivationText = (FloatingActionButton) findViewById(R.id.fab_motivation);
-//        workText = (FloatingActionButton) findViewById(R.id.fab_work);
+        scrollView = (ScrollView) findViewById(R.id.text_scroll);
     }
 
     private void setMonthAndWeekNumbers(){
@@ -85,26 +72,32 @@ public class QuestionActivity extends AppCompatActivity {
 
     public void displayBegin(){
         chosenText.setText(JsonParser.getObjectBegin(JsonData.POEM_DATA,monthNumber));
+        scrollView.scrollTo(0,0);
     }
 
     public void displayEnd(){
         chosenText.setText(JsonParser.getObjectEnd(JsonData.POEM_DATA,monthNumber));
+        scrollView.scrollTo(0,0);
     }
 
     public void displayMiddle(){
         chosenText.setText(JsonParser.getObjectMiddle(JsonData.POEM_DATA,monthNumber));
+        scrollView.scrollTo(0,0);
     }
 
     public void displayQuote(){
         chosenText.setText(JsonParser.getObjectQuote(JsonData.POEM_DATA,monthNumber) + "\n\n" + JsonParser.getObjectQuoteAuthor(JsonData.POEM_DATA,monthNumber));
+        scrollView.scrollTo(0,0);
     }
 
     public void displayMotivation(){
         chosenText.setText(JsonParser.getObjectMotivation(JsonData.POEM_DATA,monthNumber,motivationNumber));
+        scrollView.scrollTo(0,0);
     }
 
     public void displayWork(){
         chosenText.setText(JsonParser.getObjectWork(JsonData.POEM_DATA,monthNumber,weekNumber + 1));
+        scrollView.scrollTo(0,0);
     }
 
 
@@ -142,14 +135,6 @@ public class QuestionActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);    }
-    }
-
-
-
-
-    public void snackBarLooksNiceIWillLeaveItHere(View view){
-        Snackbar.make(view, "Listener checked", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
     }
 
 }

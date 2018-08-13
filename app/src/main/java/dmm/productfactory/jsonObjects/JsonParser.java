@@ -91,18 +91,6 @@ public class JsonParser {
         return work;
     }
 
-    public static String getPoemText(String JSONResult, int poemNumber){
-        JSONObject poem = null;
-        String poemText;
-        try {
-            poem = poemObject(JSONResult, poemNumber);
-            poemText = poem.getString("poemText");
-        } catch (JSONException e) {
-            e.printStackTrace();
-            poemText = "";
-        }
-        return poemText;
-    }
 
     public static int countObjects(String JSONResult){
         JSONArray poems = null;
@@ -112,30 +100,6 @@ public class JsonParser {
             e.printStackTrace();
         }
         return poems.length();
-    }
-
-    public static String getAuthor(String JSONResult){
-        JSONObject object = null;
-        try {
-            object = new JSONObject(JSONResult);
-            return object.getString("author");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return "";
-    }
-
-    public static String getTitle(String JSONResult){
-        JSONObject object = null;
-        String title;
-        try {
-            object = new JSONObject(JSONResult);
-            title = object.getString("title");
-        } catch (JSONException e) {
-            e.printStackTrace();
-            title = "";
-        }
-        return title;
     }
 
     public static String[] getObjectsList(String JSONResult){

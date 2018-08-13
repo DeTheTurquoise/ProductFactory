@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorBackground"
-    tools:context=".activities.QuestionActivity">
-
-    <android.support.constraint.ConstraintLayout
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="top|start">
+        android:background="@color/colorBackground"
+        tools:context=".activities.QuestionActivity">
 
         <ImageView
             android:id="@+id/banner"
@@ -77,74 +73,3 @@
 
 
     </android.support.constraint.ConstraintLayout>
-
-
-
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/fab_begin"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="top|start"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--android:onClick="displayBegin"-->
-        <!--app:rippleColor="@color/analogousBlue"-->
-
-        <!--app:srcCompat="@android:drawable/ic_lock_power_off" />-->
-
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/fab_middle"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="center|start"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--android:onClick="displayMiddle"-->
-        <!--app:rippleColor="@color/analogousBlue"-->
-
-        <!--app:srcCompat="@android:drawable/ic_menu_help" />-->
-
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/fab_end"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="bottom|start"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--android:onClick="displayEnd"-->
-        <!--app:rippleColor="@color/analogousBlue"-->
-
-        <!--app:srcCompat="@android:drawable/ic_menu_directions" />-->
-
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/fab_quote"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="bottom|end"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--android:onClick="displayQuote"-->
-        <!--app:rippleColor="@color/analogousBlue"-->
-
-        <!--app:srcCompat="@android:drawable/ic_menu_compass" />-->
-
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/fab_motivation"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="center|end"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--app:rippleColor="@color/analogousBlue"-->
-        <!--app:srcCompat="@android:drawable/ic_menu_gallery"-->
-
-        <!--android:onClick="displayMotivation"-->
-        <!--/>-->
-
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/fab_work"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="top|end"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--app:rippleColor="@color/analogousBlue"-->
-        <!--app:srcCompat="@android:drawable/ic_menu_edit"-->
-
-        <!--android:onClick="displayWork"/>-->
-
-</android.support.design.widget.CoordinatorLayout>
