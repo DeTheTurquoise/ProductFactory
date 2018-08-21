@@ -9,6 +9,8 @@
     <string name="menu_work">Ćwiczenie</string>
     <string name="menu_motivation">Motywacja</string>
     <string name="menu_quote">Cytat</string>
+    <string name="menu_all">Wyświetl wszystko</string>
+    <string name="menu_no">Wyczyść listę</string>
 
     <!--story screen-->
     <string name="button_next">Kolejna strona</string>
@@ -21,5 +23,6 @@
     <!--main screen-->
     <string name="button_read">Otwórz</string>
     <string name="button_read_random">Otwórz losowy wiersz</string>
+    <string name="maybe_text">A może...</string>
 </resources>
 

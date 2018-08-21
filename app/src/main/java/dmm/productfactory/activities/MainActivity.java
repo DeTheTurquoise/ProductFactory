@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 import dmm.productfactory.R;
+import dmm.productfactory.applicationData.ThingsToDo;
 import dmm.productfactory.jsonObjects.JsonData;
 import dmm.productfactory.jsonObjects.JsonParser;
 
@@ -18,16 +19,26 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView title;
     private TextView text;
+    private TextView allItems;
+    String[] thingsToDo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.maybe_layout);
         title = (TextView) findViewById(R.id.title_text);
         text = (TextView) findViewById(R.id.main_text);
+        allItems = (TextView) findViewById(R.id.show_all_scroll_text);
 
-        text.setText(JsonParser.getAuthor(JsonData.POEM_DATA));
-        title.setText(JsonParser.getTitle(JsonData.POEM_DATA));
+        Random random = new Random();
+        thingsToDo = ThingsToDo.getThingsToDo();
+        int thing = random.nextInt(thingsToDo.length);
+
+
+        text.setText(thingsToDo[thing]);
+        title.setText(R.string.maybe_text);
+
+
     }
 
 
@@ -58,7 +69,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean selectItem(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_toc:
-                startActivity(new Intent(this,TocActivity.class));
+                for (String thingToDo : thingsToDo) {
+                    allItems.append(thingToDo + "\n");
+                }
+                return true;
+            case R.id.menu_no:
+                allItems.setText("");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);    }

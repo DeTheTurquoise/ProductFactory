@@ -119,24 +119,24 @@ public class QuestionActivity extends AppCompatActivity {
 
     public boolean selectItem(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_start:
-                displayBegin();
-                return true;
-            case R.id.menu_middle:
-                displayMiddle();
-                return true;
-            case R.id.menu_end:
-                displayEnd();
-                return true;
-            case R.id.menu_quote:
-                displayQuote();
-                return true;
-            case R.id.mwnu_work:
-                displayWork();
-                return true;
-            case R.id.menu_motivation:
-                displayMotivation();
-                return true;
+//            case R.id.menu_start:
+//                displayBegin();
+//                return true;
+//            case R.id.menu_middle:
+//                displayMiddle();
+//                return true;
+//            case R.id.menu_end:
+//                displayEnd();
+//                return true;
+//            case R.id.menu_quote:
+//                displayQuote();
+//                return true;
+//            case R.id.mwnu_work:
+//                displayWork();
+//                return true;
+//            case R.id.menu_motivation:
+//                displayMotivation();
+//                return true;
             case R.id.menu_toc:
                 startActivity(new Intent(this,TocActivity.class));
                 return true;
