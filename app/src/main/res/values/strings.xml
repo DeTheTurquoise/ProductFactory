@@ -24,5 +24,7 @@
     <string name="button_read">Otwórz</string>
     <string name="button_read_random">Otwórz losowy wiersz</string>
     <string name="maybe_text">A może...</string>
+    <string name="play_text">Pobawmy się w...</string>
+    <string name="new_play">Nowa zabawa</string>
 </resources>
 

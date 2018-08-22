@@ -2,6 +2,71 @@ package dmm.productfactory.applicationData;
 
 public final class ThingsToDo {
 
+    public static String[] getPlayForChildren(){
+        return new String[] {
+                "Zabawa w skojarzenia",
+                "Poszukiwanie skarbów",
+                "Gry planszowe",
+                "Skoki przez płaską drabinkę (np. z gazety)",
+                "Skoki przez linkę",
+                "Kto wyżej podskoczy i narysuje linię",
+                "Spacer na niby (wymyślamy co widzimy i co robimy)",
+                "Przeciąganie liny",
+                "Raz, dwa, trzy – baba jaga patrzy",
+                "Ciuciubabka",
+                "Baloniku mój malutki",
+                "Gra w klasy",
+                "Celowanie",
+                "Rowerek bez pedałów",
+                "Hulajnoga, rower, rolki",
+                "Tor przeszkód",
+                "Slalom",
+                "Kalambury",
+                "Tworzenie zwierzątek z rolek po papierze toaletowym",
+                "Kto dalej popchnie mały przedmiot",
+                "Kto dalej rzuci piłkę",
+                "Origami",
+                "Samoloty z papieru",
+                "Pieczenie ciasteczek",
+                "Podlewanie kwiatów",
+                "Zabawa w ciepło – zimno",
+                "Zabawa w zgaduj zgadula",
+                "Zabawa w pomidora",
+                "Figurki z masy solnej",
+                "Piasek kinetyczny",
+                "Klocki",
+                "Ciastolina",
+                "Odbijanie balonów",
+                "Puszczanie baniek mydlanych",
+                "Odrysowywanie cieni",
+                "Okazjonalne ozdoby lub kartki",
+                "Rysowanie po kartce pokrytej wzorem z białej świecy",
+                "Rysowanie po kartce położonej na wypukłym motywie np. monecie",
+                "Czytanie książki",
+                "Wspólne wymyślanie historii",
+                "Zabawa w chowanego",
+                "Skakanie na piłce",
+                "Wycinanie obrazków z gazet",
+                "Malowanie farbami",
+                "Pieczątki",
+                "Budowanie wysokiej wieży (nie koniecznie z klocków",
+                "Wyścigi małych samochodzików",
+                "Puzzle",
+                "Śpiewanie",
+                "Tańczenie",
+                "Turlanie",
+                "Zawijanie w koc (naleśnik)",
+                "Huśtanie",
+                "Rysowanie stopami",
+                "Rowerek",
+                "Samolot",
+                "Wymyślanie rymowanek",
+                "Rozpoznawanie przedmiotów z worka po dotyku"
+
+        };
+    }
+
+
     public static String[] getThingsToDo(){
         return new String[] {
                 "Rozmarz się o swoim nowym projekcie",
