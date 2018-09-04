@@ -9,7 +9,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 import dmm.productfactory.R;
-import dmm.productfactory.applicationData.ThingsToDo;
+import dmm.productfactory.applicationData.StringArrays;
 import dmm.productfactory.jsonObjects.JsonData;
 import dmm.productfactory.jsonObjects.JsonParser;
 
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         text = (TextView) findViewById(R.id.main_text);
 
 
-        thingsToDo = ThingsToDo.getPlayForChildren();
+        thingsToDo = StringArrays.getPlayForChildren();
         int thing = random.nextInt(thingsToDo.length);
 
         text.setText(thingsToDo[thing]);
@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 //    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.menu, menu);    return true;}
+//    public boolean onCreateOptionsMenu(Menu display) {
+//        getMenuInflater().inflate(R.display.display, display);    return true;}
 //
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {

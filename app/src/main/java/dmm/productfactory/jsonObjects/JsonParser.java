@@ -19,31 +19,6 @@ public class JsonParser {
         return getObjectFromField(JSONResult, poemNumber,"name");
     }
 
-    public static String getObjectPerspective(String JSONResult, int poemNumber){
-        return getObjectFromField(JSONResult, poemNumber,"perspective");
-    }
-    public static String getObjectBegin(String JSONResult, int poemNumber){
-        return getObjectFromField(JSONResult, poemNumber,"start");
-    }
-    public static String getObjectEnd(String JSONResult, int poemNumber){
-        return getObjectFromField(JSONResult, poemNumber,"end");
-    }
-    public static String getObjectMiddle(String JSONResult, int poemNumber){
-        return getObjectFromField(JSONResult, poemNumber,"middle");
-    }
-    public static String getObjectQuestion(String JSONResult, int poemNumber){
-        return getObjectFromField(JSONResult, poemNumber,"question");
-    }
-    public static String getObjectDescription(String JSONResult, int poemNumber){
-        return getObjectFromField(JSONResult, poemNumber,"description");
-    }
-    public static String getObjectQuote(String JSONResult, int poemNumber){
-        return getObjectFromField(JSONResult, poemNumber,"quote_text");
-    }
-    public static String getObjectQuoteAuthor(String JSONResult, int poemNumber){
-        return getObjectFromField(JSONResult, poemNumber,"quote_author");
-    }
-
     public static String getObjectFromField(String JSONResult, int poemNumber, String jsonField){
         JSONObject poem = null;
         String poemTitle;
@@ -55,23 +30,6 @@ public class JsonParser {
             poemTitle = "";
         }
         return poemTitle;
-    }
-
-    public static String getObjectMotivation(String JSONResult, int poemNumber, int motNumber){
-        JSONObject month = null;
-        JSONArray motArray = null;
-        JSONObject motObject = null;
-        String motivation;
-        try {
-            month = poemObject(JSONResult, poemNumber);
-            motArray = month.getJSONArray("motivation");
-            motObject = motArray.getJSONObject(0);
-            motivation = motObject.getString("m" + motNumber);
-        } catch (JSONException e) {
-            e.printStackTrace();
-            motivation = "";
-        }
-        return motivation;
     }
 
     public static String getObjectWork(String JSONResult, int poemNumber, int week){
@@ -145,6 +103,19 @@ public class JsonParser {
         }
         return poemList;
     }
+
+    public static String[] getDGlist(String result, String field) throws JSONException {
+        JSONObject object = new JSONObject(result);
+        JSONObject response = object.getJSONObject("response");
+        JSONArray items = response.getJSONArray("items");
+        String titles[] = new String[items.length()];
+        for (int i = 0; i<items.length();i++){
+            object = items.getJSONObject(i);
+            titles[i] = object.getString(field);
+        }
+        return titles;
+    }
+
 
 }
 

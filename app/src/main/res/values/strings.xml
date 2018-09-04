@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name"> </string>
 
-    <!--menu-->
+    <!--display-->
     <string name="menu_toc">Spis treści</string>
     <string name="menu_start">Tak na początek</string>
     <string name="menu_middle">A tak w rozwinięciu</string>
@@ -26,5 +26,12 @@
     <string name="maybe_text">A może...</string>
     <string name="play_text">Pobawmy się w...</string>
     <string name="new_play">Nowa zabawa</string>
+
+    <!--dg-->
+    <string name="dg_hint">Szukaj podcastu</string>
+    <string name="dg_no_podcast">Nie ma podcastu o tym tytule</string>
+
+    <!--network-->
+    <string name="connection_error">Wystąpił problem z połączeniem internetowym</string>
 </resources>
 

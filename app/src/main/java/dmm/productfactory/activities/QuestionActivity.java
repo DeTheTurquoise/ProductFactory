@@ -15,8 +15,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 import dmm.productfactory.R;
-import dmm.productfactory.jsonObjects.JsonData;
-import dmm.productfactory.jsonObjects.JsonParser;
 
 public class QuestionActivity extends AppCompatActivity {
 
@@ -48,7 +46,7 @@ public class QuestionActivity extends AppCompatActivity {
                 monthNumber = intentThatStartedThisActivity.getIntExtra(Intent.EXTRA_TEXT,0);
             }
         }
-        setMonthData();
+        //setMonthData();
 
     }
 
@@ -76,42 +74,42 @@ public class QuestionActivity extends AppCompatActivity {
             motivationNumber = 2;
         }
     }
-
-    private void setMonthData(){
-        question.setText(JsonParser.getObjectQuestion(JsonData.POEM_DATA,monthNumber));
-        perspective.setText("PERSPEKTYWA: " + JsonParser.getObjectPerspective(JsonData.POEM_DATA,monthNumber));
-        chosenText.setText(JsonParser.getObjectDescription(JsonData.POEM_DATA,monthNumber));
-    }
-
-    public void displayBegin(){
-        chosenText.setText(JsonParser.getObjectBegin(JsonData.POEM_DATA,monthNumber));
-    }
-
-    public void displayEnd(){
-        chosenText.setText(JsonParser.getObjectEnd(JsonData.POEM_DATA,monthNumber));
-    }
-
-    public void displayMiddle(){
-        chosenText.setText(JsonParser.getObjectMiddle(JsonData.POEM_DATA,monthNumber));
-    }
-
-    public void displayQuote(){
-        chosenText.setText(JsonParser.getObjectQuote(JsonData.POEM_DATA,monthNumber) + "\n\n" + JsonParser.getObjectQuoteAuthor(JsonData.POEM_DATA,monthNumber));
-    }
-
-    public void displayMotivation(){
-        chosenText.setText(JsonParser.getObjectMotivation(JsonData.POEM_DATA,monthNumber,motivationNumber));
-    }
-
-    public void displayWork(){
-        chosenText.setText(JsonParser.getObjectWork(JsonData.POEM_DATA,monthNumber,weekNumber + 1));
-    }
-
+//
+//    private void setMonthData(){
+//        question.setText(JsonParser.getObjectQuestion(JsonData.POEM_DATA,monthNumber));
+//        perspective.setText("PERSPEKTYWA: " + JsonParser.getObjectPerspective(JsonData.POEM_DATA,monthNumber));
+//        chosenText.setText(JsonParser.getObjectDescription(JsonData.POEM_DATA,monthNumber));
+//    }
+//
+//    public void displayBegin(){
+//        chosenText.setText(JsonParser.getObjectBegin(JsonData.POEM_DATA,monthNumber));
+//    }
+//
+//    public void displayEnd(){
+//        chosenText.setText(JsonParser.getObjectEnd(JsonData.POEM_DATA,monthNumber));
+//    }
+//
+//    public void displayMiddle(){
+//        chosenText.setText(JsonParser.getObjectMiddle(JsonData.POEM_DATA,monthNumber));
+//    }
+//
+//    public void displayQuote(){
+//        chosenText.setText(JsonParser.getObjectQuote(JsonData.POEM_DATA,monthNumber) + "\n\n" + JsonParser.getObjectQuoteAuthor(JsonData.POEM_DATA,monthNumber));
+//    }
+//
+//    public void displayMotivation(){
+//        chosenText.setText(JsonParser.getObjectMotivation(JsonData.POEM_DATA,monthNumber,motivationNumber));
+//    }
+//
+//    public void displayWork(){
+//        chosenText.setText(JsonParser.getObjectWork(JsonData.POEM_DATA,monthNumber,weekNumber + 1));
+//    }
+//
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);    return true;}
+        getMenuInflater().inflate(R.menu.display, menu);    return true;}
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
